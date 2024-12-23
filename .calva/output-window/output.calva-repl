@@ -1,0 +1,951 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless & popd
+; Using host:port 127.0.0.1:53167 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉estoque.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉estoque.core꞉> 
+; Jack-in done.
+clj꞉estoque.core꞉> 
+1
+clj꞉estoque.core꞉> 
+2
+clj꞉estoque.core꞉> 
+10
+clj꞉estoque.core꞉> 
+"Hi,clojure.core$name@6b6fd127"
+clj꞉estoque.core꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:14:1).
+; Unable to resolve symbol: say-hi in this context
+clj꞉estoque.core꞉> 
+#'estoque.core/say-hi
+clj꞉estoque.core꞉> 
+"Hi,on the code again"
+clj꞉estoque.core꞉> 
+2
+clj꞉estoque.core꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:1:8666).
+; Unable to resolve symbol: estoque in this context
+clj꞉estoque.core꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:1:8666).
+; Unable to resolve symbol: estoque in this context
+; 
+; Syntax error reading source at (REPL:4:43).
+; Unmatched delimiter: )
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+println("Oi")
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\.calva\output-window\output.calva-repl:1:8666).
+; Unable to resolve symbol: Oi in this context
+clj꞉estoque.core꞉> 
+(println "Oi")
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\.calva\output-window\output.calva-repl:1:8666).
+; Unable to resolve symbol: Oi in this context
+clj꞉estoque.core꞉> 
+(println 10)
+10
+clj꞉estoque.core꞉> 
+(println "Test")
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\.calva\output-window\output.calva-repl:1:8666).
+; Unable to resolve symbol: Test in this context
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+; Bem vindo ao sistema de estoque
+nil
+clj꞉estoque.core꞉> 
+cls
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\.calva\output-window\output.calva-repl:1:8666).
+; Unable to resolve symbol: cls in this context
+clj꞉estoque.core꞉> 
+clear
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\.calva\output-window\output.calva-repl:1:8666).
+; Unable to resolve symbol: clear in this context
+clj꞉estoque.core꞉> 
+; REPL history clearedclj꞉estoque.core꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:8:2).
+; Unable to resolve symbol: valor-descontado in this context
+clj꞉estoque.core꞉> 
+; Syntax error reading source at (REPL:5:22).
+; Unmatched delimiter: )
+clj꞉estoque.core꞉> 
+; 999/10
+nil
+clj꞉estoque.core꞉> 
+; hello world
+nil
+clj꞉estoque.aula3꞉> 
+; hello world
+nil
+clj꞉estoque.aula3꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless & popd
+; Using host:port 127.0.0.1:54363 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉estoque.core꞉> 
+; Jack-in done.
+clj꞉estoque.core꞉> 
+; hello world
+nil
+clj꞉estoque.aula3꞉> 
+; hello world
+nil
+clj꞉estoque.aula3꞉> 
+; Execution error (ClassCastException) at estoque.aula3/eval10344 (form-init13332685649709799818.clj:9).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.aula3/eval10346 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.aula3꞉> 
+; Execution error (ClassCastException) at estoque.aula3/eval10596 (form-init13332685649709799818.clj:9).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.aula3/eval10598 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.aula3꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula3.clj:1:8668).
+; Unable to resolve symbol: ve-aplicat-desconto? in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula3.clj:1:8668).
+; Unable to resolve symbol: valor-bruto in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula3.clj:5:7).
+; Unable to resolve symbol: valor-bruto in this context
+; 
+; Syntax error reading source at (REPL:7:12).
+; Unmatched delimiter: )
+clj꞉estoque.aula3꞉> 
+; Execution error (ClassCastException) at estoque.aula3/eval10603 (form-init13332685649709799818.clj:9).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.aula3/eval10605 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.aula3꞉> 
+; Execution error (ClassCastException) at estoque.aula3/eval10618 (form-init13332685649709799818.clj:9).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.aula3/eval10620 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.aula3꞉> 
+; Execution error (ClassCastException) at estoque.core/eval10633 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.core/eval10635 (form-init13332685649709799818.clj:11).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.core꞉> 
+; 999/10
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:1:8668).
+; Unable to resolve symbol: n in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:1:8668).
+; Unable to resolve symbol: valor-bruto in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\core.clj:6:7).
+; Unable to resolve symbol: valor-bruto in this context
+; 
+; Syntax error reading source at (REPL:8:12).
+; Unmatched delimiter: )
+clj꞉estoque.core꞉> 
+; Execution error (ClassCastException) at estoque.core/eval10653 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.core/eval10655 (form-init13332685649709799818.clj:11).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.core꞉> 
+; Execution error (ClassCastException) at estoque.core/eval10658 (form-init13332685649709799818.clj:10).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+; 
+; Execution error (ClassCastException) at estoque.core/eval10660 (form-init13332685649709799818.clj:11).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉estoque.core꞉> 
+; false
+; true
+nil
+clj꞉estoque.aula3꞉> 
+; false
+; true
+nil
+clj꞉estoque.aula3꞉> 
+; 900N
+; 100
+nil
+clj꞉estoque.aula3꞉> 
+; nil
+; true
+; 900N
+; 100
+nil
+clj꞉estoque.aula3꞉> 
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+; Execution error (ArityException) at estoque.aula3/eval10747 (form-init13332685649709799818.clj:27).
+; Wrong number of args (2) passed to: estoque.aula3/eval10747/fn--10748
+; 
+; Execution error (ArityException) at estoque.aula3/eval10751 (form-init13332685649709799818.clj:28).
+; Wrong number of args (2) passed to: estoque.aula3/eval10751/fn--10752
+; 
+; Execution error (ArityException) at estoque.aula3/eval10755 (form-init13332685649709799818.clj:29).
+; Wrong number of args (2) passed to: estoque.aula3/eval10755/fn--10756
+; 
+; Execution error (ArityException) at estoque.aula3/eval10759 (form-init13332685649709799818.clj:30).
+; Wrong number of args (2) passed to: estoque.aula3/eval10759/fn--10760
+; 
+; Execution error (ArityException) at estoque.aula3/eval10764 (form-init13332685649709799818.clj:31).
+; Wrong number of args (2) passed to: estoque.aula3/eval10764/fn--10765
+; 
+; Execution error (ArityException) at estoque.aula3/eval10769 (form-init13332685649709799818.clj:32).
+; Wrong number of args (2) passed to: estoque.aula3/eval10769/fn--10770
+; 
+; Execution error (ArityException) at estoque.aula3/eval10774 (form-init13332685649709799818.clj:33).
+; Wrong number of args (2) passed to: estoque.aula3/eval10774/fn--10775
+; 
+; Execution error (ArityException) at estoque.aula3/eval10779 (form-init13332685649709799818.clj:34).
+; Wrong number of args (2) passed to: estoque.aula3/eval10779/fn--10780
+clj꞉estoque.aula3꞉> 
+; 900N
+; 100
+; true
+; false
+; true
+; false
+; true
+; false
+; true
+; false
+; 900N
+; 100
+; 900N
+; 100
+nil
+clj꞉estoque.aula3꞉> 
+; 900N
+; 100
+; 900N
+; false
+; true
+; false
+; true
+; false
+; true
+; false
+; 900N
+; 100
+; 900N
+; 100
+nil
+clj꞉estoque.aula3꞉> 
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+; 900N
+; 100
+nil
+clj꞉estoque.aula3꞉> 
+#'estoque.aula4/precos
+clj꞉estoque.aula4꞉> 
+precos
+[30 700 1000]
+clj꞉estoque.aula4꞉> 
+; [30 700 1000] 0
+nil
+clj꞉estoque.aula4꞉> 
+; [30 700 1000] 0
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+nil
+clj꞉estoque.aula4꞉> 
+; Execution error (IndexOutOfBoundsException) at estoque.aula4/eval11043 (form-init13332685649709799818.clj:5).
+; null
+clj꞉estoque.aula4꞉> 
+; nil
+nil
+clj꞉estoque.aula4꞉> 
+; 1000
+nil
+clj꞉estoque.aula4꞉> 
+; 0
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; sexo
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; 0
+; [30 700 1000 5]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; Execution error (ArityException) at estoque.aula4/eval11161 (form-init13332685649709799818.clj:13).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; [30 699 1000]
+nil
+clj꞉estoque.aula4꞉> 
+nil
+nil
+clj꞉estoque.aula4꞉> 
+; [30 699 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula4.clj:1:8668).
+; Unable to resolve symbol: valor in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula4.clj:19:3).
+; Unable to resolve symbol: valor in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula4.clj:20:3).
+; Unable to resolve symbol: valor in this context
+; 
+; Syntax error reading source at (REPL:20:15).
+; Unmatched delimiter: )
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+; Estou somando 1 em 30
+; [31 700 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+; Estou somando 1 em 30
+; [31 700 1000]
+nil
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+; Estou somando 1 em 30
+; [31 700 1000]
+; (; Execution error (ArityException) at estoque.aula4/eval11323 (form-init13332685649709799818.clj:39).
+; Wrong number of args (1) passed to: estoque.aula4/valor-descontado
+clj꞉estoque.aula4꞉> 
+30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+; Estou somando 1 em 30
+; [31 700 1000]
+; (30 630N 900N)
+nil
+clj꞉estoque.aula4꞉> 
+; (0 1 2 3 4 5 6 7 8 9)
+nil
+clj꞉estoque.aula4꞉> 
+; (0 2 4 6 8)
+nil
+clj꞉estoque.aula4꞉> 
+; (700 1000)
+nil
+clj꞉estoque.aula4꞉> 
+(630N 900N)
+clj꞉estoque.aula4꞉> 
+(700 1000)
+clj꞉estoque.aula4꞉> 
+; Syntax error reading source at (REPL:47:10).
+; Unmatched delimiter: )
+clj꞉estoque.aula4꞉> 
+; Syntax error reading source at (REPL:47:18).
+; Unmatched delimiter: )
+clj꞉estoque.aula4꞉> 
+; 30
+; 700
+; 1000
+; nil
+; [30 700 1000 5]
+; [31 700 1000]
+; [30 699 1000]
+; Estou somando 1 em 30
+; [31 700 1000]
+; (30 630N 900N)
+; (0 1 2 3 4 5 6 7 8 9)
+; (0 2 4 6 8)
+; [30 700 1000]
+(630N 900N)
+clj꞉estoque.aula4꞉> 
+; Execution error (ArityException) at estoque.aula4/eval11407 (form-init13332685649709799818.clj:47).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉estoque.aula4꞉> 
+; Execution error (ArityException) at estoque.aula4/eval11411 (form-init13332685649709799818.clj:54).
+; Wrong number of args (2) passed to: estoque.aula4/valor-descontado
+clj꞉estoque.aula4꞉> 
+21000000
+clj꞉estoque.aula4꞉> 
+1730
+clj꞉estoque.aula4꞉> 
+precos
+[30 700 1000]
+clj꞉estoque.aula4꞉> 
+(precos)
+; Execution error (ArityException) at estoque.aula4/eval11417 (form-init13332685649709799818.clj:515).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉estoque.aula4꞉> 
+precos
+[30 700 1000]
+clj꞉estoque.aula4꞉> 
+(reduce + precos)
+1730
+clj꞉estoque.aula4꞉> 
+1730
+clj꞉estoque.aula4꞉> 
+
+
+(reduce + precos)
+1730
+clj꞉estoque.aula4꞉> 
+1730
+clj꞉estoque.aula4꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula4.clj:1:8668).
+; Unable to resolve symbol: recos in this context
+; 
+; Syntax error reading source at (REPL:54:28).
+; Unmatched delimiter: )
+clj꞉estoque.aula4꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula4.clj:54:2).
+; Unable to resolve symbol: minha-soma in this context
+clj꞉estoque.aula4꞉> 
+; Somando valor 1 e 2
+; Somando valor 1 e 2
+#'estoque.aula4/minha-soma
+clj꞉estoque.aula4꞉> 
+; Somando valor 1 e 2
+; Somando valor 1 e 2
+1730
+clj꞉estoque.aula4꞉> 
+; Somando valor 1 e 2
+; Somando valor 1 e 2
+1730
+clj꞉estoque.aula4꞉> 
+; Execution error (ArityException) at estoque.aula4/eval11434 (form-init13332685649709799818.clj:61).
+; Wrong number of args (0) passed to: estoque.aula4/minha-soma
+clj꞉estoque.aula4꞉> 
+[30 700 1000]
+clj꞉estoque.aula4꞉> 
+; Somando valor 1 e 2
+; Somando valor 1 e 2
+1730
+clj꞉estoque.aula4꞉> 
+{"Mochila" 10, "Camiseta" 5}
+clj꞉estoque.aula5꞉> 
+{"Mochila" 10, "Camiseta" 5}
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+true
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+("Mochila" "Camiseta")
+clj꞉estoque.aula5꞉> 
+#function[clojure.core/key]
+clj꞉estoque.aula5꞉> 
+("Mochila" "Camiseta")
+clj꞉estoque.aula5꞉> 
+; Execution error (ClassCastException) at (REPL:1).
+; null
+clj꞉estoque.aula5꞉> 
+("Mochila" "Camiseta")
+clj꞉estoque.aula5꞉> 
+(10 5)
+clj꞉estoque.aula5꞉> 
+; Syntax error reading source at (REPL:7:16).
+; Unmatched delimiter: )
+clj꞉estoque.aula5꞉> 
+(10 5)
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5}
+clj꞉estoque.aula5꞉> 
+{"Mochila" 10, "Camiseta" 5}
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5, :cadeira 3}
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5}
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5}
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5}
+clj꞉estoque.aula5꞉> 
+{:mochila 10, :camiseta 5, :cadeira 3}
+clj꞉estoque.aula5꞉> 
+; Execution error (ArityException) at estoque.aula5/eval11498 (form-init13332685649709799818.clj:16).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉estoque.aula5꞉> 
+; Execution error (ArityException) at estoque.aula5/eval11500 (form-init13332685649709799818.clj:16).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+nil
+clj꞉estoque.aula5꞉> 
+{:mochila 11, :camiseta 5}
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+nil
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula5.clj:1:8668).
+; Unable to resolve symbol: UM in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula5.clj:1:8668).
+; Unable to resolve symbol: NOVO in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula5.clj:1:8668).
+; Unable to resolve symbol: VALOR in this context
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+nil
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+nil
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula5.clj:1:8668).
+; Unable to resolve symbol: LOR in this context
+clj꞉estoque.aula5꞉> 
+; {:mochila 10, :camiseta 5}
+nil
+clj꞉estoque.aula5꞉> 
+{:camiseta 5}
+clj꞉estoque.aula5꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula5.clj:31:1).
+; Unable to resolve symbol: pedido in this context
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}, :chaveiro {:quantidade 2, :preco 10}}
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+nil
+clj꞉estoque.aula5꞉> 
+0
+clj꞉estoque.aula5꞉> 
+0
+clj꞉estoque.aula5꞉> 
+nil
+clj꞉estoque.aula5꞉> 
+10
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+0
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+0
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+; Execution error (ClassCastException) at estoque.aula5/eval11569 (form-init13332685649709799818.clj:42).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉estoque.aula5꞉> 
+; Execution error (IllegalArgumentException) at estoque.aula5/eval11571 (form-init13332685649709799818.clj:42).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 3, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+:mochila
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+{:mochila {:quantidade 2, :preco 80}, :camiseta {:quantidade 3, :preco 40}}
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+{:quantidade 2, :preco 80}
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+2
+clj꞉estoque.aula5꞉> 
+; 2
+nil
+clj꞉estoque.aula5꞉> 
+nil
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/imprime-e-15
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/imprime-e-15
+clj꞉estoque.aula6꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:11:10).
+; Unable to resolve symbol: pedido in this context
+clj꞉estoque.aula6꞉> 
+; (valor [:mochila {:quantidade 2, :preco 80}]
+; valor [:camiseta {:quantidade 3, :preco 40}]
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (valor [:mochila {:quantidade 2, :preco 80}]
+; valor [:camiseta {:quantidade 3, :preco 40}]
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (valor [:mochila {:quantidade 2, :preco 80}]
+; tipo do simbolo valor #function[clojure.core/class] [:mochila {:quantidade 2, :preco 80}]
+; valor [:camiseta {:quantidade 3, :preco 40}]
+; tipo do simbolo valor #function[clojure.core/class] [:camiseta {:quantidade 3, :preco 40}]
+; nil nil)
+nil
+clj꞉estoque.aula6꞉> 
+; (valor [:mochila {:quantidade 2, :preco 80}]
+; tipo do simbolo valor #function[clojure.core/class] [:mochila {:quantidade 2, :preco 80}]
+; valor [:camiseta {:quantidade 3, :preco 40}]
+; tipo do simbolo valor #function[clojure.core/class] [:camiseta {:quantidade 3, :preco 40}]
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (valor [:mochila {:quantidade 2, :preco 80}]
+; tipo do simbolo valor #function[clojure.core/class] [:mochila {:quantidade 2, :preco 80}]
+; valor [:camiseta {:quantidade 3, :preco 40}]
+; tipo do simbolo valor #function[clojure.core/class] [:camiseta {:quantidade 3, :preco 40}]
+; nil nil)
+nil
+clj꞉estoque.aula6꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:1:8668).
+; Unable to resolve symbol: chave in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:8:3).
+; Unable to resolve symbol: chave in this context
+; 
+; Syntax error reading source at (REPL:8:29).
+; Unmatched delimiter: )
+clj꞉estoque.aula6꞉> 
+; (:mochila e nil
+; :camiseta e nil
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (:mochila e nil
+; :camiseta e nil
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (:mochila e {:quantidade 2, :preco 80}
+; :camiseta e {:quantidade 3, :preco 40}
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+nil
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/preco-por-produto
+clj꞉estoque.aula6꞉> 
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: estoque.aula6/preco-por-produto
+clj꞉estoque.aula6꞉> 
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: estoque.aula6/preco-por-produto
+clj꞉estoque.aula6꞉> 
+(160 120)
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/total-do-pedido
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/total-do-pedido
+clj꞉estoque.aula6꞉> 
+280
+clj꞉estoque.aula6꞉> 
+280
+clj꞉estoque.aula6꞉> 
+; Execution error (IllegalArgumentException) at estoque.aula6/total-do-pedido (form-init13332685649709799818.clj:25).
+; Don't know how to create ISeq from: clojure.core$_PLUS_
+clj꞉estoque.aula6꞉> 
+; Execution error (IllegalArgumentException) at estoque.aula6/total-do-pedido (form-init13332685649709799818.clj:25).
+; Don't know how to create ISeq from: clojure.core$_PLUS_
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+280
+clj꞉estoque.aula6꞉> 
+; Execution error (UnsupportedOperationException) at estoque.aula6/preco-por-produto (form-init13332685649709799818.clj:16).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+280
+clj꞉estoque.aula6꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:1:8668).
+; Unable to resolve symbol: PRECO in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:1:8668).
+; Unable to resolve symbol: TOTAL in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:1:8668).
+; Unable to resolve symbol: DO in this context
+; 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:1:8668).
+; Unable to resolve symbol: PEDIDO in this context
+; 
+; Error printing return value (NullPointerException) at clojure.lang.Numbers/ops (Numbers.java:1095).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉estoque.aula6꞉> 
+; Error printing return value (NullPointerException) at clojure.lang.Numbers/ops (Numbers.java:1095).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/total-do-pedido
+clj꞉estoque.aula6꞉> 
+; Execution error (NullPointerException) at estoque.aula6/preco-total-do-produto (form-init13332685649709799818.clj:41).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉estoque.aula6꞉> 
+280
+clj꞉estoque.aula6꞉> 
+nil
+clj꞉estoque.aula6꞉> 
+({:quantidade 2, :preco 80} {:quantidade 3, :preco 40})
+clj꞉estoque.aula6꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:51:1).
+; Unable to resolve symbol: total-do-pedido2 in this context
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/gratuito?
+clj꞉estoque.aula6꞉> 
+; Syntax error compiling at (c:\Users\gusta\Downloads\clojure_course\projeto_estoque\estoque\src\estoque\aula6.clj:64:1).
+; Unable to resolve symbol: pedido2 in this context
+clj꞉estoque.aula6꞉> 
+true
+clj꞉estoque.aula6꞉> 
+([:mochila {:quantidade 2, :preco 80}] [:camiseta {:quantidade 3, :preco 40}] [:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+[:mochila {:quantidade 2, :preco 80}]
+([:mochila {:quantidade 2, :preco 80}][:camiseta {:quantidade 3, :preco 40}]
+ [:camiseta {:quantidade 3, :preco 40}][:chaveiro {:quantidade 1}]
+ [:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+; Error printing return value (ClassCastException) at clojure.lang.APersistentMap$ValSeq/first (APersistentMap.java:236).
+; class clojure.lang.Keyword cannot be cast to class java.util.Map$Entry (clojure.lang.Keyword is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+clj꞉estoque.aula6꞉> 
+#'estoque.aula6/gratuito?
+clj꞉estoque.aula6꞉> 
+; ({:quantidade 2, :preco 80} {:quantidade 3, :preco 40} {:quantidade 1})
+true
+clj꞉estoque.aula6꞉> 
+; Execution error (ArityException) at estoque.aula6/gratuito? (form-init13332685649709799818.clj:62).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+{:quantidade 2, :preco 80}
+({:quantidade 2, :preco 80}{:quantidade 3, :preco 40}
+ {:quantidade 3, :preco 40}{:quantidade 1}
+ {:quantidade 1})
+clj꞉estoque.aula6꞉> 
+({:quantidade 2, :preco 80} {:quantidade 3, :preco 40} {:quantidade 1})
+clj꞉estoque.aula6꞉> 
+({:quantidade 1})
+clj꞉estoque.aula6꞉> 
+; ({:quantidade 1})
+nil
+clj꞉estoque.aula6꞉> 
+; ({:quantidade 1})
+nil
+clj꞉estoque.aula6꞉> 
+; (:mochila <e> {:quantidade 2, :preco 80}
+; :camiseta <e> {:quantidade 3, :preco 40}
+; 15 15)
+; ({:quantidade 1})
+nil
+clj꞉estoque.aula6꞉> 
+; ([:chaveiro {:quantidade 1}])
+nil
+clj꞉estoque.aula6꞉> 
+; ([:chaveiro {:quantidade 1}])
+nil
+clj꞉estoque.aula6꞉> 
+; (; Execution error (UnsupportedOperationException) at estoque.aula6/gratuito? (form-init13332685649709799818.clj:69).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+(; Execution error (UnsupportedOperationException) at estoque.aula6/gratuito? (form-init13332685649709799818.clj:69).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+; Error printing return value (UnsupportedOperationException) at clojure.lang.RT/nthFrom (RT.java:992).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+; Error printing return value (UnsupportedOperationException) at clojure.lang.RT/nthFrom (RT.java:992).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+; Error printing return value (UnsupportedOperationException) at clojure.lang.RT/nthFrom (RT.java:992).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+; Error printing return value (UnsupportedOperationException) at clojure.lang.RT/nthFrom (RT.java:992).
+; nth not supported on this type: PersistentArrayMap
+clj꞉estoque.aula6꞉> 
+
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+()
+clj꞉estoque.aula6꞉> 
+()
+clj꞉estoque.aula6꞉> 
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+()
+clj꞉estoque.aula6꞉> 
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
+([:chaveiro {:quantidade 1}])
+clj꞉estoque.aula6꞉> 
